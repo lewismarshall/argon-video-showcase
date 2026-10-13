@@ -1,4 +1,179 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARGON // 18 — made in code by Gemini 4 Argon</title>
-<style>body{margin:0;background:#05070d;color:#cfe;font-family:system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;min-height:100vh;justify-content:center}video{width:min(96vw,1280px);border-radius:8px}p{opacity:.7;max-width:900px;text-align:center;padding:0 1em}a{color:#7cf}</style></head>
-<body><video controls playsinline preload="metadata" poster="poster.png" src="showcase.mp4"></video>
-<p>42 s, 1080p, 30 fps. Every frame and every note generated from code by Gemini 4 Argon (High) via the Cursor CLI. <a href="https://github.com/lewismarshall/argon-video-showcase">Source</a></p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ARGON // 18 — Act I &amp; Act II (Google is back) — made in code by Gemini 4 Argon</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2.5rem 1.25rem 4rem;
+      background: #05070d;
+      color: #cfe;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      max-width: 960px;
+      margin-bottom: 1.75rem;
+    }
+    .eyebrow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #00f0ff;
+      opacity: 0.85;
+      margin-bottom: 0.4rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+    .subtitle {
+      margin: 0 auto;
+      opacity: 0.78;
+      max-width: 780px;
+      line-height: 1.5;
+      font-size: 0.98rem;
+    }
+    .hero-section {
+      width: min(96vw, 1280px);
+      margin-bottom: 3rem;
+      background: rgba(10, 18, 34, 0.7);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65);
+    }
+    .badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.82rem;
+      color: #7cf;
+    }
+    .badge {
+      background: rgba(0, 240, 255, 0.12);
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      color: #00f0ff;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    video {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      background: #020307;
+    }
+    .caption {
+      margin: 0.85rem 0 0.2rem;
+      opacity: 0.8;
+      font-size: 0.94rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .acts-grid {
+      width: min(96vw, 1280px);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 540px), 1fr));
+      gap: 1.5rem;
+    }
+    .act-card {
+      background: rgba(10, 18, 34, 0.55);
+      border: 1px solid rgba(120, 200, 255, 0.18);
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .act-card h2 {
+      margin: 0.1rem 0 0.6rem;
+      font-size: 1.15rem;
+      color: #fff;
+    }
+    .act-card .caption {
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.75;
+    }
+    a {
+      color: #7cf;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">GEMINI 4 ARGON // 100% PROCEDURAL CODE-TO-VIDEO</div>
+    <h1>ARGON // 18 — Full Showcase (Act I + Act II)</h1>
+    <p class="subtitle">
+      Every frame and every note generated entirely from code (C/OpenMP/AVX-512 3D PBR Raymarcher + Python + Cairo + NumPy/SciPy + FFmpeg) by Gemini 4 Argon via the Cursor CLI. Zero external assets.
+    </p>
+  </header>
+
+  <section class="hero-section">
+    <div class="badge-row">
+      <span class="badge">FULL CUT // ACT I + ACT II</span>
+      <span>80 s • 1920×1080 @ 30 fps • 48 kHz Stereo Procedural Audio</span>
+    </div>
+    <video controls playsinline preload="metadata" poster="act2-poster.png" src="showcase-full.mp4"></video>
+    <p class="caption">
+      <strong>Full Combined Cut (80 s):</strong> Act I builds the 2D noble-gas simulation engine (`0:00–0:42`), then morphs seamlessly from Frame 1259 into Act II's path-traced/PBR 3D liquid-chrome &amp; noble-gas plasma singularity (<em>"Google is back"</em>, `0:42–1:11`), before cutting to an ironic Google Nest smart-home finale set to a sensible <code>19 °C</code> (`1:11–1:20`).
+    </p>
+  </section>
+
+  <div class="acts-grid">
+    <section class="act-card">
+      <div class="badge-row">
+        <span class="badge">ACT I</span>
+        <span>42 s • 1080p30</span>
+      </div>
+      <h2>Act I: Noble Precision (2D Mathematical &amp; Audio Engine)</h2>
+      <video controls playsinline preload="metadata" poster="poster.png" src="showcase.mp4"></video>
+      <p class="caption">
+        Bohr `2-8-8` Argon ignition, 3D RK4 Lorenz strange attractor + N-body gravity, live radix/quicksort telemetry, 4D rotating tesseract + neural tensor lattice, and cyberpunk warp corridor in D Dorian (120 BPM).
+      </p>
+    </section>
+
+    <section class="act-card">
+      <div class="badge-row">
+        <span class="badge">ACT II</span>
+        <span>38 s • 1080p30</span>
+      </div>
+      <h2>Act II: Google is Back (3D PBR Raymarching &amp; 19 °C Finale)</h2>
+      <video controls playsinline preload="metadata" poster="act2-poster.png" src="act2.mp4"></video>
+      <p class="caption">
+        Morphs directly from the exact final frame of Act I into 3D Signed Distance Field liquid chrome, impossible Penrose/Mobius topology, 4-color spectral plasma, and a deadpan Google Nest speaker &amp; <code>19 °C</code> thermostat epilogue.
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>
+      Built in code by Gemini 4 Argon (High) via Cursor CLI •
+      <a href="https://github.com/lewismarshall/argon-video-showcase">View Source on GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>

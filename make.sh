@@ -19,6 +19,11 @@ rm -f out/soundtrack.wav out/soundtrack_act2.wav out/soundtrack_full.wav
 rm -f out/audio_env.npz out/audio_env_act2.npz
 rm -rf out/preview out/preview2
 
+# Sync generated videos and posters to docs/ for GitHub Pages
+if [ -d docs ]; then
+    cp out/showcase.mp4 out/act2.mp4 out/showcase-full.mp4 out/poster.png out/act2-poster.png docs/
+fi
+
 echo "=================================================================="
 echo "  Verifying output streams with ffprobe:"
 echo "=================================================================="
