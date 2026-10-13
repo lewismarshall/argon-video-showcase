@@ -919,9 +919,8 @@ def render_act6_finale(
 ):
     lt = t - 36.0  # 0.0 -> 6.0s
     enter = ease_out_expo(clamp(lt / 1.2, 0.0, 1.0))
-    # Smooth fade-to-black only in the final 0.85s (41.15s -> 42.0s)
-    fade_out = clamp((DURATION - t) / 0.85, 0.0, 1.0)
-    vis = enter * fade_out
+    # Hold the finale lockup at full luminous intensity through 42.0s so Act II can morph seamlessly from Frame 1259
+    vis = enter
 
     cx, cy = 960.0, 460.0
     c.radial_glow(cx, cy, 520.0 * vis, COL_CYAN, 0.25 * vis)
@@ -1111,11 +1110,6 @@ def _render_frame_layered(frame_idx, t, kick, snare, arp, rms, spec, act_num, ac
     # Replay all recorded typography onto the PIL RGBA image
     pil_draw = ImageDraw.Draw(pil_rgba)
     rec.replay(pil_draw)
-
-    # Apply global fade-to-black at the very end (41.2s -> 42.0s)
-    if t > 41.2:
-        fade_k = clamp((DURATION - t) / 0.8, 0.0, 1.0)
-        pil_rgba = Image.eval(pil_rgba, lambda px: int(px * fade_k))
 
     if return_pil:
         # Apply bloom and return PIL Image

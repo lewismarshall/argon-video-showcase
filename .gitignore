@@ -1,4 +1,8 @@
 node_modules/
 .venv/
+__pycache__/
+*.pyc
+src/*.so
+*.mp3
 out/*.mp4
 DONE.md

@@ -513,9 +513,9 @@ def generate_soundtrack(out_dir: str = "/workspace/argon-video/out") -> dict:
     mix_l += wet_l * 0.38
     mix_r += wet_r * 0.38
 
-    # Master fade-in (first 0.35s) and smooth fade-out (last 1.8s: 40.2s -> 42.0s)
+    # Master fade-in (first 0.35s) and warm resonant chord sustain up to 42.0s for seamless Act II continuation
     fade_in = np.clip(t / 0.35, 0.0, 1.0)
-    fade_out = np.clip((DURATION - t) / 1.8, 0.0, 1.0) ** 1.6
+    fade_out = (0.38 + 0.62 * (np.clip((DURATION - t) / 2.0, 0.0, 1.0) ** 1.4)) * np.clip((DURATION - t) / 0.03, 0.0, 1.0)
     master_env = fade_in * fade_out
     mix_l *= master_env
     mix_r *= master_env
